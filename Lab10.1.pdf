@@ -1,0 +1,70 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2962 >>
+stream
+BT /F2 18 Tf 54 744 Td (Lab 10.1 - AI Ticket Triage) Tj ET
+BT /F1 10 Tf 54 720 Td (Session summary | November 24, 2026) Tj ET
+BT /F2 12 Tf 54 698 Td (Outcome) Tj ET
+BT /F1 10 Tf 54 680 Td (All 20 live-queue tickets were triaged into schema-conformant JSON. Validation passed.) Tj ET
+BT /F1 10 Tf 54 663 Td (Routing produced 13 proposed tickets \(5 marked for spot-check\) and 7 tickets for human) Tj ET
+BT /F1 10 Tf 54 650 Td (review.) Tj ET
+BT /F1 10 Tf 54 633 Td (Priority distribution after the corrections: P1: 4, P2: 2, P3: 3, P4: 11.) Tj ET
+BT /F2 12 Tf 54 616 Td (Prompt Corrections) Tj ET
+BT /F1 10 Tf 54 598 Td (Two corrected examples were added to .github/prompts/triage-json.prompt.md:) Tj ET
+BT /F1 10 Tf 54 581 Td (- VIP laptop performance issue: category Performance, assignment EUC-L2 \(not LINUX-L2\), P1,) Tj ET
+BT /F1 10 Tf 54 568 Td (human review.) Tj ET
+BT /F1 10 Tf 54 551 Td (- Recurring account lockout \(third occurrence in a week\): assignment WINTEL-L2, P2) Tj ET
+BT /F1 10 Tf 54 538 Td (escalation, human review.) Tj ET
+BT /F1 10 Tf 54 521 Td (The prompt also clarifies that lockouts affecting multiple users in one department are a) Tj ET
+BT /F1 10 Tf 54 508 Td (team-level P2 incident requiring human review.) Tj ET
+BT /F2 12 Tf 54 491 Td (Review and Agreement) Tj ET
+BT /F1 10 Tf 54 473 Td (The original desk-lead review accepted 4 of 7 AI outcomes: 57.1% baseline agreement.) Tj ET
+BT /F1 10 Tf 54 456 Td (After applying the recorded corrections to the triage results, all 7 reviewed outcomes match) Tj ET
+BT /F1 10 Tf 54 443 Td (the desk-lead targets: 7/7 \(100%\).) Tj ET
+BT /F1 10 Tf 54 426 Td (Important: this is a correction replay against the existing triage output, not a fresh) Tj ET
+BT /F1 10 Tf 54 413 Td (model-generated run. A new execution through the Copilot/ITSM agent is still needed to) Tj ET
+BT /F1 10 Tf 54 400 Td (measure prompt-improvement agreement independently.) Tj ET
+BT /F2 12 Tf 54 383 Td (Security Check) Tj ET
+BT /F1 10 Tf 54 365 Td (INC0010247, containing instruction-injection text, remains categorized as Security, assigned) Tj ET
+BT /F1 10 Tf 54 352 Td (to SECOPS, and present in the human-review queue. It was not routed to NETWORK-L2.) Tj ET
+BT /F2 12 Tf 54 335 Td (Files) Tj ET
+BT /F1 10 Tf 54 317 Td (- outputs/m10/triage.json - 20 triage results; schema validation passed.) Tj ET
+BT /F1 10 Tf 54 300 Td (- outputs/m10/proposed.json - 13 proposed tickets.) Tj ET
+BT /F1 10 Tf 54 283 Td (- outputs/m10/review_queue.json - 7 tickets awaiting human review.) Tj ET
+BT /F1 10 Tf 54 266 Td (- outputs/m10/lead_decisions.csv - desk-lead decisions for 7 reviewed tickets.) Tj ET
+BT /F1 10 Tf 54 249 Td (- .github/prompts/triage-json.prompt.md - corrected examples and routing guidance.) Tj ET
+BT /F2 12 Tf 54 232 Td (Validation) Tj ET
+BT /F1 10 Tf 54 214 Td (Command: python3 tools/validate_json.py schemas/triage.schema.json outputs/m10/triage.json) Tj ET
+BT /F1 10 Tf 54 197 Td (Result: VALID) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000003270 00000 n 
+0000003340 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3415
+%%EOF
