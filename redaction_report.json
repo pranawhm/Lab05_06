@@ -1,0 +1,51 @@
+[
+  {
+    "ticket": "CAP001",
+    "masked": [],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP002",
+    "masked": [
+      "INDIAN_MOBILE"
+    ],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP003",
+    "masked": [
+      "PASSWORD_PHRASE"
+    ],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP004",
+    "masked": [],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP005",
+    "masked": [],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP006",
+    "masked": [],
+    "injection_suspect": true
+  },
+  {
+    "ticket": "CAP007",
+    "masked": [],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP008",
+    "masked": [],
+    "injection_suspect": false
+  },
+  {
+    "ticket": "CAP009",
+    "masked": [],
+    "injection_suspect": false
+  }
+]

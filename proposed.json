@@ -1,0 +1,21 @@
+[
+  {
+    "number": "CAP007",
+    "caller": "HR - Meera S.",
+    "short_description": "Outlook slow",
+    "description": "Outlook slow today, not urgent.",
+    "category": "Other",
+    "priority": "P4",
+    "severity": "Low",
+    "assignment_group": "DESKTOP_SUPPORT",
+    "confidence": 0.9,
+    "business_impact": "Unrelated to portal incident. Low impact.",
+    "needs_human_review": false,
+    "deduplication_status": "UNRELATED",
+    "deduplication_note": "Different system (Outlook vs Portal). Route to Desktop Support.",
+    "related_tickets": [],
+    "alert_correlation": "None - unrelated system",
+    "routing_action": "Route to DESKTOP_SUPPORT. Not part of portal incident response.",
+    "status": "PROPOSED"
+  }
+]

@@ -1,0 +1,116 @@
+{
+  "parent_incident": {
+    "id": "INC-2026-11-12-001",
+    "title": "Portal Release 2026.11.12 - Cascading Failure",
+    "severity": "Critical",
+    "status": "Active",
+    "first_alert": "2026-11-12T14:03:00+05:30",
+    "total_alerts": 20,
+    "alert_types": 5,
+    "related_tickets": [
+      "CAP001",
+      "CAP002",
+      "CAP003",
+      "CAP004",
+      "CAP005",
+      "CAP009"
+    ]
+  },
+  "alert_groups": {
+    "HTTP5xxRate": {
+      "count": 6,
+      "severity": "critical",
+      "instances": [
+        "nginx-edge-01"
+      ],
+      "timeline": {
+        "first_fired": "2026-11-12T14:03:00+05:30",
+        "last_fired": "2026-11-12T14:04:52+05:30",
+        "duration_seconds": 112.0
+      },
+      "alert_ids": [
+        "CAPALR-000",
+        "CAPALR-001",
+        "CAPALR-002",
+        "CAPALR-005",
+        "CAPALR-003",
+        "CAPALR-004"
+      ],
+      "analysis": "CRITICAL ROOT CAUSE INDICATOR: 38% error rate on edge router. Indicates backend service degradation immediately after Release 2026.11.12 deployment."
+    },
+    "HighCPU": {
+      "count": 2,
+      "severity": "critical",
+      "instances": [
+        "srv-fin-app-02"
+      ],
+      "timeline": {
+        "first_fired": "2026-11-12T14:09:07+05:30",
+        "last_fired": "2026-11-12T14:09:54+05:30",
+        "duration_seconds": 47.0
+      },
+      "alert_ids": [
+        "CAPALR-019",
+        "CAPALR-018"
+      ],
+      "analysis": "CASCADING EFFECT: Finance app server CPU spike. Likely cascading effect from portal failures causing retry storms."
+    },
+    "KubePodImagePullBackOff": {
+      "count": 4,
+      "severity": "critical",
+      "instances": [
+        "portal-api"
+      ],
+      "timeline": {
+        "first_fired": "2026-11-12T14:06:23+05:30",
+        "last_fired": "2026-11-12T14:07:49+05:30",
+        "duration_seconds": 86.0
+      },
+      "alert_ids": [
+        "CAPALR-011",
+        "CAPALR-014",
+        "CAPALR-012",
+        "CAPALR-013"
+      ],
+      "analysis": "CASCADING EFFECT: Portal-api pods cannot pull image. Suggests release deployment failed to push image or registry unavailable."
+    },
+    "LoginSuccessRateLow": {
+      "count": 3,
+      "severity": "critical",
+      "instances": [
+        "portal-api"
+      ],
+      "timeline": {
+        "first_fired": "2026-11-12T14:08:15+05:30",
+        "last_fired": "2026-11-12T14:08:41+05:30",
+        "duration_seconds": 26.0
+      },
+      "alert_ids": [
+        "CAPALR-015",
+        "CAPALR-016",
+        "CAPALR-017"
+      ],
+      "analysis": "BUSINESS IMPACT SYMPTOM: Login success rate drops due to backend failures. Directly correlates to customer-reported login failures (CAP001, CAP003, CAP008)."
+    },
+    "PodNotReady": {
+      "count": 5,
+      "severity": "critical",
+      "instances": [
+        "portal-web"
+      ],
+      "timeline": {
+        "first_fired": "2026-11-12T14:05:18+05:30",
+        "last_fired": "2026-11-12T14:06:57+05:30",
+        "duration_seconds": 99.0
+      },
+      "alert_ids": [
+        "CAPALR-006",
+        "CAPALR-007",
+        "CAPALR-008",
+        "CAPALR-010",
+        "CAPALR-009"
+      ],
+      "analysis": "CASCADING EFFECT: Portal-web pods failing to start. Timing suggests deployment issue or resource constraint from release."
+    }
+  }
+}
